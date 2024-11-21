@@ -1,12 +1,150 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
-:root{
-  --bs-info-rgb:197, 225, 165;
-  --bs-font-sans-serif:"Karla", serif;
-  --bs-body-font-family: var(--bs-font-sans-serif);
+
+html, body {
+    height: 100%; /* Asegura que el body y html ocupen todo el alto de la pantalla */
+    margin: 0; /* Elimina el margen predeterminado */
 }
 
-.display-1{
-  font -size: calc(1.625 rem + 5vw);
-  font-weight: 50;
+body {
+    font-family: 'Karla', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Asegura que el contenido principal esté en la parte superior */
+    align-items: center; /* Centra el contenido horizontalmente */
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 0 20px; /* Añadir un poco de padding para no pegar el contenido a los bordes */
+    min-height: 100vh; /* Asegura que el body ocupe todo el alto de la pantalla */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://tuviajefinanciero.cl/fondoinicio.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Capa oscura con opacidad */
+    z-index: -1;
+}
+
+.cover-container {
+    max-width: 42em;
+    z-index: 2;
+    margin-top: 20vh; /* Ajuste para separar el contenido del navbar */
+    margin-bottom: auto; 
+}
+
+.masthead .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: bold;
+}
+
+.masthead .nav-link:hover {
+    color: #fff;
+}
+
+.cover-heading {
+    font-size: 2.5rem;
+}
+
+footer {
+    color: rgba(255, 255, 255, 0.85);
+    padding: 1rem;
+    z-index: 2;
+    width: 100%; /* Hace que el footer ocupe todo el ancho */
+    display: flex;
+    justify-content: center; /* Centra el texto del footer */
+    align-items: center; /* Centra el texto verticalmente */
+    position: absolute;
+    bottom: 0; /* Asegura que el footer esté en la parte inferior */
+}
+
+footer a {
+    color: #fff; /* Cambia el color del texto a blanco */
+    text-decoration: underline; /* Agrega el subrayado al enlace */
+}
+
+footer a:hover {
+    color: #d1d1d1; /* Cambia el color del enlace cuando pasa el cursor por encima */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Separar los elementos a la izquierda y derecha */
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro con algo de transparencia */
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 10%;
+    position: absolute; /* Fija la barra en la parte superior */
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Espacio entre los elementos del menú */
+    margin: 0;
+}
+
+.navbar-links li {
+    display: inline;
+}
+
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.navbar-links a:hover {
+    color: #d1d1d1; /* Color más claro en hover */
+    text-decoration: underline; /* Añadir subrayado en hover */
+}
+
+/* Asegúrate de que el contenido no se superponga con la barra */
+body {
+    padding-top: 70px; /* Ajusta según el tamaño de la barra */
+}
+/* Botón Ver Colecciones */
+.btn-colecciones {
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo del mismo color que el navbar */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Tamaño del botón */
+    font-size: 1rem; /* Tamaño de la fuente */
+    font-weight: 500; /* Peso de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición para el hover */
+}
+
+.btn-colecciones:hover {
+    background-color: rgba(0, 0, 0, 0.6); /* Cambio a un color más oscuro al pasar el mouse */
+    text-decoration: none; /* Eliminar subrayado */
 }
