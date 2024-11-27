@@ -75,7 +75,7 @@
 
         /* Cambiar el color del texto del logo y los enlaces del menú al colocar el mouse */
 .header .logo:hover {
-    color: (26, 35, 126); /* Cambia el color del logo a negro */
+    color: blue; /* Cambia el color del logo a negro */
     font-weight: bold;
     cursor: pointer; /* Cambia el cursor a mano al pasar sobre el logo */
 }
