@@ -3,7 +3,7 @@
    body {
             margin: 0;
             font-family: 'Karla', sans-serif;
-            background-color: #f5f5f5;
+            background-color: #FAFAFA;
             color: #000;
         }
         .container {
@@ -113,7 +113,7 @@
             padding: 20px 0;
             text-align: center;
             width: 100%;
-            background-color: #f5f5f5;
+            background-color: #FAFAFA;
         }
         footer p {
             font-size: 14px;
