@@ -74,17 +74,32 @@
         }
 
         /* Cambiar el color del texto del logo y los enlaces del menú al colocar el mouse */
-.header .logo:hover {
-    color: black; /* Cambia el color del logo a negro */
-    font-weight: bold;
-    cursor: pointer; /* Cambia el cursor a mano al pasar sobre el logo */
+        .header .logo:hover {
+        color: black; /* Cambia el color del logo a negro */
+        font-weight: bold;
+        cursor: pointer; /* Cambia el cursor a mano al pasar sobre el logo */
+        }
+
+        .header nav a:hover {
+        color: black; /* Cambia el color de los enlaces del menú a negro */
+        font-weight: bold;
+        }
+
+        /* Estilo para la navegación */
+nav a {
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+    color: #000; /* Color predeterminado de los enlaces */
+    padding: 5px 9px; /* Añadir algo de espacio alrededor del enlace */
+    display: inline-block; /* Asegurar que los enlaces sean de bloque en línea */
 }
 
-.header nav a:hover {
-    color: #252cc4; /* Cambia el color de los enlaces del menú a negro */
-    font-weight: bold;
+/* Estilo para el enlace activo (en negrita) */
+nav a.activo {
+    color: black; /* Color del texto del enlace activo */
+    background-color: #B7F7D8; /* Fondo verde para el enlace activo */
+    border-radius: 20px; /* Bordes redondeados */
+    font-weight: bold; /* Poner el texto en negrita */
 }
-
 
         }
         .subtitle {
@@ -108,9 +123,11 @@
             border-radius: 20px;
             font-size: 16px;
         }
+
         footer {
-            margin-top: auto;
-            padding: 20px 0;
+    margin-top: auto; /* Empuja el footer al fondo */
+    text-align: center; /* Centra el texto dentro del footer */
+           padding: 20px 0;
             text-align: center;
             width: 100%;
             background-color: #f5f5f5;
@@ -128,4 +145,92 @@
             text-decoration: underline;
 
 
+        }
+        .income-section, .summary-section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+        }
+        .income-section {
+            background-color: #f0f4f8;
+        }
+        .summary-section {
+            background-color: #dfbffe;
+            color: #494949;
+        }
+        .income-section h2, .summary-section h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .income-section input[type="text"], .income-section input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .income-section .total {
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+            text-align: right;
+        }
+        .summary-section .balance {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .summary-section .category {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .expenses-section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            margin-top: 20px;
+        }
+        .expenses-section h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .expenses-section label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .expenses-section input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .simulador {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos bajen de línea si no hay suficiente espacio */
+    gap: 20px; /* Espacio entre columnas */
+    justify-content: space-between; /* Asegura que se distribuyan uniformemente */
+}
+
+.summary-section,
+.income-section,
+.expenses-section {
+    flex-basis: 30%; /* Cada sección ocupa aproximadamente un tercio */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+}
+
+@media (max-width: 768px) {
+    .summary-section,
+    .income-section,
+    .expenses-section {
+        flex-basis: 100%; /* Cada sección ocupa el ancho completo */
+    }
+}
 

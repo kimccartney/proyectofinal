@@ -1,0 +1,224 @@
+
+<html>
+ <head>
+ <!-- Meta Robots -->
+        <meta name="robots" content="index, follow" />
+        
+        <!-- Primary Meta Tags -->
+    
+        <meta property="og:title" content="Tu Viaje Financiero" />
+        <meta property="og:description" content="Descubre herramientas para mejorar tu salud financiera y alcanzar tus metas." />
+        <meta property="og:image" content="https://tuviajefinanciero.cl/metatagfoto.jpg" />
+        <meta property="og:url" content="https://tuviajefinanciero.cl" />
+        <meta property="og:type" content="website" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://tuviajefinanciero.cl/" />
+        <meta property="og:title" content="Tu Viaje Financiero" />
+        <meta
+            property="og:description"
+            content="Facilitamos el acceso a información sobre recursos, proyectos y plataformas de apoyo en educación financiera, brindando herramientas prácticas para mejorar la gestión económica personal y de emprendimientos."
+        />
+        <meta property="og:image" content="https://tuviajefinanciero.cl/metatagfoto.jpg" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="http://tuviajefinanciero.cl/" />
+        <meta property="twitter:title" content="Tu Viaje Financiero" />
+        <meta
+            property="twitter:description"
+            content="Facilitamos el acceso a información sobre recursos, proyectos y plataformas de apoyo en educación financiera, brindando herramientas prácticas para mejorar la gestión económica personal y de emprendimientos."
+        />
+        <meta property="twitter:image" content="https://tuviajefinanciero.cl/metatagfoto.jpg" />
+
+  <title>
+   Tu Viaje Financiero
+  </title>
+
+   <link rel="icon" href="https://tuviajefinanciero.cl/favicon.ico" type="image/x-icon">
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+
+ </head>
+
+ <body>
+
+    <div class="container">
+    <div class="header">
+      <div class="logo">
+        Tu Viaje Financiero
+      </div>
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="page1.html"> PLATAFORMAS FINANCIERAS </a>
+        <a href="page2.html" class="activo"> ARMA TU PRESUPUESTO </a>
+        <a href="page3.html"> SOBRE EL PROYECTO</a>
+      </nav>
+    </div>
+
+    <div class="volver-container">
+    <a href="index.html" class="my-2 btn btn-light btn-small volver-btn">‹ Volver</a>
+    </div>
+
+    <div class="container">
+    <h1>Simulador de gastos</h1>
+    <div class="simulador">
+        <!-- Resumen -->
+        <div class="summary-section card">
+            <h2>Resumen</h2>
+            <div class="category">
+                <span>Ingresos totales:</span>
+                <span id="total-income">0 $</span>
+            </div>
+            <div class="category">
+                <span>Gastos totales:</span>
+                <span id="total-expenses">0 $</span>
+            </div>
+            <div class="balance">
+                <strong>Balance:</strong> <span id="final-balance">0 $</span>
+            </div>
+            <h3>Balance por tipo de gasto</h3>
+            <div class="category">
+                <span>Gastos del hogar:</span>
+                <span id="home-expense-percent">0%</span>
+            </div>
+            <div class="category">
+                <span>Transporte:</span>
+                <span id="transport-expense-percent">0%</span>
+            </div>
+            <div class="category">
+                <span>Educación:</span>
+                <span id="education-expense-percent">0%</span>
+            </div>
+            <div class="category">
+                <span>Gastos personales:</span>
+                <span id="personal-expense-percent">0%</span>
+            </div>
+            <div class="category">
+                <span>Ahorros:</span>
+                <span id="savings-expense-percent">0%</span>
+            </div>
+            <div id="custom-expense-percentages"></div>
+        </div>
+
+        <!-- Ingresos -->
+        <div class="income-section card">
+            <h2>Tus ingresos</h2>
+            <label for="salary">Salario Principal</label>
+            <input type="number" id="salary" value="0" oninput="updateSummary()">
+            <label for="other-income">Otras fuentes de ingreso</label>
+            <input type="number" id="other-income" value="0" oninput="updateSummary()">
+            <div class="total">
+                <strong>Total:</strong> <span id="total-income-display">0 $</span>
+            </div>
+        </div>
+
+        <!-- Gastos -->
+        <div class="expenses-section card">
+            <h2>Tus gastos</h2>
+            <label for="home-expenses">Gastos del hogar</label>
+            <input type="number" id="home-expenses" value="0" oninput="updateSummary()">
+            <label for="transport-expenses">Transporte</label>
+            <input type="number" id="transport-expenses" value="0" oninput="updateSummary()">
+            <label for="education-expenses">Educación</label>
+            <input type="number" id="education-expenses" value="0" oninput="updateSummary()">
+            <label for="personal-expenses">Gastos personales</label>
+            <input type="number" id="personal-expenses" value="0" oninput="updateSummary()">
+            <label for="savings">Ahorros</label>
+            <input type="number" id="savings" value="0" oninput="updateSummary()">
+
+            <!-- Gastos personalizados -->
+            <div id="custom-expenses"></div>
+            <button onclick="addCustomExpense()">Añadir gasto personalizado</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function formatToCLP(value) {
+        return '$' + value.toLocaleString('es-CL');
+    }
+
+    function updateSummary() {
+        const salary = parseFloat(document.getElementById('salary').value) || 0;
+        const otherIncome = parseFloat(document.getElementById('other-income').value) || 0;
+        const totalIncome = salary + otherIncome;
+        document.getElementById('total-income').innerText = formatToCLP(totalIncome);
+        document.getElementById('total-income-display').innerText = formatToCLP(totalIncome);
+
+        const homeExpenses = parseFloat(document.getElementById('home-expenses').value) || 0;
+        const transportExpenses = parseFloat(document.getElementById('transport-expenses').value) || 0;
+        const educationExpenses = parseFloat(document.getElementById('education-expenses').value) || 0;
+        const personalExpenses = parseFloat(document.getElementById('personal-expenses').value) || 0;
+        const savings = parseFloat(document.getElementById('savings').value) || 0;
+
+        const expenses = {
+            home: homeExpenses,
+            transport: transportExpenses,
+            education: educationExpenses,
+            personal: personalExpenses,
+            savings: savings,
+        };
+
+        // Sum custom expenses
+        const customExpenseInputs = document.querySelectorAll('.custom-expense');
+        const customExpenseNames = document.querySelectorAll('.custom-expense-name');
+        const customExpenses = Array.from(customExpenseInputs).map((input, index) => ({
+            name: customExpenseNames[index].value || `Gasto personalizado ${index + 1}`,
+            value: parseFloat(input.value) || 0,
+        }));
+
+        customExpenses.forEach((expense, index) => {
+            expenses[`custom-${index}`] = expense.value;
+        });
+
+        const totalExpenses = Object.values(expenses).reduce((acc, curr) => acc + curr, 0);
+        document.getElementById('total-expenses').innerText = formatToCLP(totalExpenses);
+
+        const finalBalance = totalIncome - totalExpenses;
+        document.getElementById('final-balance').innerText = formatToCLP(finalBalance);
+
+        // Update percentages
+        document.getElementById('home-expense-percent').innerText = ((homeExpenses / totalIncome) * 100).toFixed(2) + '%';
+        document.getElementById('transport-expense-percent').innerText = ((transportExpenses / totalIncome) * 100).toFixed(2) + '%';
+        document.getElementById('education-expense-percent').innerText = ((educationExpenses / totalIncome) * 100).toFixed(2) + '%';
+        document.getElementById('personal-expense-percent').innerText = ((personalExpenses / totalIncome) * 100).toFixed(2) + '%';
+        document.getElementById('savings-expense-percent').innerText = ((savings / totalIncome) * 100).toFixed(2) + '%';
+
+        const customPercentContainer = document.getElementById('custom-expense-percentages');
+        customPercentContainer.innerHTML = '';
+        customExpenses.forEach((expense, index) => {
+            const percent = ((expense.value / totalIncome) * 100).toFixed(2) + '%';
+            const div = document.createElement('div');
+            div.className = 'category';
+            div.innerHTML = `<span>${expense.name}:</span> <span>${percent}</span>`;
+            customPercentContainer.appendChild(div);
+        });
+    }
+
+    function addCustomExpense() {
+        const container = document.getElementById('custom-expenses');
+        const index = container.children.length;
+        const div = document.createElement('div');
+        div.innerHTML = `
+            <label>Nombre del gasto:</label>
+            <input type="text" class="custom-expense-name" placeholder="Nombre del gasto">
+            <label for="custom-expense-${index}">Monto:</label>
+            <input type="number" id="custom-expense-${index}" class="custom-expense" data-index="${index}" value="0" oninput="updateSummary()">
+        `;
+        container.appendChild(div);
+    }
+</script>
+
+
+
+    <footer class="mt-auto">
+    <p>Proyecto de titulación y plataforma sobre Educación Financiera por <a href="https://www.linkedin.com/in/kimberly-mccartney-m1602/" target="blank"><strong><u>Kimberly McCartney</u></strong></a>.</p>
+    </footer>
+
+</body>
+</html>

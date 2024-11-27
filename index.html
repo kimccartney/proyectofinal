@@ -43,20 +43,21 @@
     <link rel="stylesheet" href="style.css"> 
 
  </head>
+
  <body>
   <div class="container">
    <div class="header">
     <div class="logo">
      Tu Viaje Financiero
     </div>
-    
-        <nav>
-     <a href="index.html"> HOME </a>
+
+    <nav>
+     <a href="index.html" class="activo">HOME</a>
      <a href="page1.html"> PLATAFORMAS FINANCIERAS </a>
      <a href="page2.html"> ARMA TU PRESUPUESTO </a>
      <a href="page3.html"> SOBRE EL PROYECTO</a>
     </nav>
-    
+
    </div>
    <div class="main-title">
     UNA PLATAFORMA DIGITAL
@@ -148,6 +149,22 @@
         });
   </script>
 
+  <script>
+     // Obtener todos los enlaces del menú de navegación
+    const enlaces = document.querySelectorAll("nav a");
+
+    // Obtener la URL actual
+    const urlActual = window.location.pathname;
+
+    // Recorrer los enlaces y asignar la clase "activo" si coinciden con la URL actual
+    enlaces.forEach((enlace) => {
+        if (enlace.getAttribute("href") === urlActual) {
+            enlace.classList.add("activo");
+        }
+    });
+
+</script>
+
 <body>
     <div class="container">
         <div class="left">
@@ -158,11 +175,11 @@
             <div class="description">
                 Facilitamos el acceso a información sobre recursos, proyectos y plataformas de apoyo en educación financiera, brindando herramientas prácticas para mejorar la gestión económica personal y de emprendimientos.
             </div>
-            <a href="#" class="button">CONOCER MÁS</a>
+            <a href="page3.html" class="button">CONOCER MÁS</a>
         </div>
     </div>
     <footer class="mt-auto">
-        <p>Proyecto de titulación y plataforma sobre Educación Financiera por <a href="https://www.linkedin.com/in/kimberly-mccartney-m1602/" target="blank"><strong><u>Kimberly McCartney</u></strong></a>.</p>
+    <p>Proyecto de titulación y plataforma sobre Educación Financiera por <a href="https://www.linkedin.com/in/kimberly-mccartney-m1602/" target="blank"><strong><u>Kimberly McCartney</u></strong></a>.</p>
     </footer>
 </body>
 
