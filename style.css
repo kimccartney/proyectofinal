@@ -81,7 +81,7 @@
 }
 
 .header nav a:hover {
-    color: blue; /* Cambia el color de los enlaces del menú a negro */
+    color: #252cc4; /* Cambia el color de los enlaces del menú a negro */
     font-weight: bold;
 }
 
