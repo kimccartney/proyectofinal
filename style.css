@@ -5,11 +5,42 @@ body {
     font-family: 'Karla', sans-serif;
     background-color: #f5f5f5;
     color: black;
+    left:40px;
 }
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantiza que la página ocupe al menos toda la ventana */
+}
+
+.content {
+    flex: 1; /* Expande el contenido para ocupar el espacio entre header y footer */
+}
+
 .container {
     width: 90%;
     margin: 0 auto;
 }
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.left h1 {
+    margin-left: 100px;  
+    margin-right: 20px;
+}
+
+/* Subtítulo */
+.left .sub-title {
+    margin-left: 100px;
+    margin-right: 20px;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -46,6 +77,19 @@ body {
     width: 23%;
     margin-bottom: 40px;
 }
+
+/* Contenedor de proyectos */
+.projects {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/* Proyecto individual */
+.project {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .project img {
     width: 100%;
     height: auto;
@@ -106,18 +150,37 @@ nav a.activo {
     font-weight: bold; /* Poner el texto en negrita */
 }
 
+.index-page {
+background: rgb(223,191,254);
+background: linear-gradient(0deg, rgba(223,191,254,0.5298713235294117) 0%, rgba(183,247,216,0.4178265056022409) 100%);
+}
+
+.plataformas-page {
+background: rgb(223,191,254);
+background: linear-gradient(0deg, rgba(223,191,254,0.5298713235294117) 0%, rgba(183,247,216,0.4178265056022409) 100%);
+}
+
 .presupuesto-page {
-    background-image: url('https://raw.githubusercontent.com/kimccartney/proyectofinal/refs/heads/main/fondopage2.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    min-height: 100vh; /* Altura mínima igual a la altura total de la ventana */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    display: flex; /* Opcional: para centrar contenido si es necesario */
+    align-items: center; /* Opcional: centra contenido verticalmente */
+    justify-content: center; /* Opcional: centra contenido horizontalmente */
+    background: 
+    url('https://raw.githubusercontent.com/kimccartney/proyectofinal/refs/heads/main/fondopage2.png') center center no-repeat, 
+    linear-gradient(0deg, rgba(223,191,254,0.53) 0%, rgba(183,247,216,0.42) 100%);
+    background-size: contain, cover; /* Ajusta el tamaño de ambas capas */
+    background-position: center, center;
 }
 
 .proyecto-page {
-    background-image: url('https://raw.githubusercontent.com/kimccartney/proyectofinal/refs/heads/main/fondopage3.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    min-height: 100vh; /* Altura mínima igual a la altura total de la ventana */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    background: 
+    url('https://raw.githubusercontent.com/kimccartney/proyectofinal/refs/heads/main/fondopage3.png') center center no-repeat, 
+    linear-gradient(0deg, rgba(223,191,254,0.53) 0%, rgba(183,247,216,0.42) 100%);
+    background-size: contain, cover; /* Ajusta el tamaño de ambas capas */
+    background-position: center, center;
 }
 
 .subtitle {
