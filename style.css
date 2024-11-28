@@ -277,3 +277,9 @@ footer a:hover {
     margin: 80;
     padding-left: 20px; /* Ajusta el espacio entre el texto y el borde de la columna derecha */
 }
+
+.page3 .center .description {
+    margin: 0; /* Elimina márgenes */
+    padding-left: 0px; /* Ajusta el espacio entre el texto y el borde de la columna derecha */
+    text-align: center; /* Alinea el texto horizontalmente */
+}
