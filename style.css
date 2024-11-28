@@ -115,7 +115,7 @@ nav a.activo {
 
 .proyecto-page {
     background-image: url('https://raw.githubusercontent.com/kimccartney/proyectofinal/refs/heads/main/fondopage3.png');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
