@@ -47,10 +47,15 @@
             margin-bottom: 40px;
         }
         .project img {
-            width: 100%;
-            height: auto;
-            transition: border-radius 0.3s ease;
-        }
+       width: 100%;
+       height: auto;
+       border-radius: 8px; /* Bordes redondeados */
+       border: 5px solid transparent; /* Borde transparente */
+       background-image: radial-gradient(circle, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8) 100%), url('ruta-de-la-imagen');
+       background-size: cover;
+       background-position: center;
+       transition: border-radius 0.3s ease;
+         }
         .project img:hover {
             border-radius: 50%;
         }
