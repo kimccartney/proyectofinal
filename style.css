@@ -1,102 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
-   body {
-            margin: 0;
-            font-family: 'Karla', sans-serif;
-            background-color: #f5f5f5;
-            color: black;
-        }
-        .container {
-            width: 90%;
-            margin: 0 auto;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-        .header .logo {
-            font-size: 18px;
-            font-weight: 700;
-        }
-        .header nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #000;
-            font-weight: 300;
-        }
-        .main-title {
-            font-size: 64px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin: 40px 0;
-        }
-        .sub-title {
-            font-size: 18px;
-            font-weight: 300;
-            margin-bottom: 40px;
-        }
-        .projects {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        .project {
-            width: 23%;
-            margin-bottom: 40px;
-        }
-        .project img {
-       width: 100%;
-       height: auto;
-       border-radius: 8px; /* Bordes redondeados */
-       border: 5px solid transparent; /* Borde transparente */
-       background-image: radial-gradient(circle, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8) 100%), url('ruta-de-la-imagen');
-       background-size: cover;
-       background-position: center;
-       transition: border-radius 0.3s ease;
-         }
-        .project img:hover {
-            border-radius: 50%;
-        }
-        .project .project-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 10px;
-            font-size: 14px;
-            font-weight: 300;
-        }
-        .project .project-info .project-number {
-            font-weight: 700;
-        }
-        .about-section {
-            display: none;
-            font-size: 32px;
-            font-weight: 700;
-            text-align: center;
-            margin-top: 40px;
-        }
+body {
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+    background-color: #f5f5f5;
+    color: black;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.header .logo {
+    font-size: 18px;
+    font-weight: 700;
+}
+.header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 300;
+}
+.main-title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 40px 0;
+}
+.sub-title {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+.projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.project {
+    width: 23%;
+    margin-bottom: 40px;
+}
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados */
+    border: 5px solid transparent; /* Borde transparente */
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8) 100%), url('ruta-de-la-imagen');
+    background-size: cover;
+    background-position: center;
+    transition: border-radius 0.3s ease;
+}
+.project img:hover {
+    border-radius: 50%; /* Convierte la imagen en un círculo al hacer hover */
+}
+.project .project-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 300;
+}
+.project .project-info .project-number {
+    font-weight: 700;
+}
+.about-section {
+    display: none;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 40px;
+}
 
-        /* Cambiar el color del texto del logo y los enlaces del menú al colocar el mouse */
-        .header .logo:hover {
-        color: black; /* Cambia el color del logo a negro */
-        font-weight: bold;
-        cursor: pointer; /* Cambia el cursor a mano al pasar sobre el logo */
-        }
+/* Cambiar el color del texto del logo y los enlaces del menú al colocar el mouse */
+.header .logo:hover {
+    color: black; /* Cambia el color del logo a negro */
+    font-weight: bold;
+    cursor: pointer; /* Cambia el cursor a mano al pasar sobre el logo */
+}
 
-        .header nav a:hover {
-        color: black; /* Cambia el color de los enlaces del menú a negro */
-        font-weight: bold;
-        }
+.header nav a:hover {
+    color: black; /* Cambia el color de los enlaces del menú a negro */
+    font-weight: bold;
+}
 
-        /* Estilo para la navegación */
+/* Estilo para la navegación */
 nav a {
     text-decoration: none; /* Eliminar subrayado de los enlaces */
     color: #000; /* Color predeterminado de los enlaces */
     padding: 5px 9px; /* Añadir algo de espacio alrededor del enlace */
     display: inline-block; /* Asegurar que los enlaces sean de bloque en línea */
-}
+}   
 
 /* Estilo para el enlace activo (en negrita) */
 nav a.activo {
@@ -106,118 +106,122 @@ nav a.activo {
     font-weight: bold; /* Poner el texto en negrita */
 }
 
-        }
-        .subtitle {
-            font-size: 24px;
-            color: #333;
-            margin: 20px 0;
-        }
-        .description {
-            font-size: 18px;
-            color: #333;
-            line-height: 1.6;
+.presupuesto-page {
+    background-image: url('https://raw.githubusercontent.com/kimccartney/proyectofinal/refs/heads/main/fondopage2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-                }
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 20px;
-            font-size: 16px;
-        }
+.subtitle {
+    font-size: 24px;
+    color: #333;
+    margin: 20px 0;
+}
+.description {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
 
-        footer {
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+footer {
     margin-top: auto; /* Empuja el footer al fondo */
     text-align: center; /* Centra el texto dentro del footer */
-           padding: 20px 0;
-            text-align: center;
-            width: 100%;
-            background-color: #f5f5f5;
-        }
-        footer p {
-            font-size: 14px;
-            color: #333;
-        }
-        footer a {
-            color: #333;
-            text-decoration: none;
-        }
-        footer a:hover {
-            color: #000000;
-            text-decoration: underline;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    background-color: transparent;
+}
+footer p {
+    font-size: 14px;
+    color: #333;
+}
+footer a {
+    color: #333;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+.income-section, .summary-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+.income-section {
+    background-color: #f0f4f8;
+}
+.summary-section {
+    background-color: #dfbffe;
+    color: #494949;
+}
+.income-section h2, .summary-section h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.income-section input[type="text"], .income-section input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.income-section .total {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    text-align: right;
+}
+.summary-section .balance {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+.summary-section .category {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.expenses-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    margin-top: 20px;
+}
+.expenses-section h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.expenses-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+.expenses-section input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
-
-        }
-        .income-section, .summary-section {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 300px;
-        }
-        .income-section {
-            background-color: #f0f4f8;
-        }
-        .summary-section {
-            background-color: #dfbffe;
-            color: #494949;
-        }
-        .income-section h2, .summary-section h2 {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .income-section input[type="text"], .income-section input[type="number"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .income-section .total {
-            font-size: 18px;
-            font-weight: bold;
-            color: black;
-            text-align: right;
-        }
-        .summary-section .balance {
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            margin: 20px 0;
-        }
-        .summary-section .category {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-        .expenses-section {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 300px;
-            margin-top: 20px;
-        }
-        .expenses-section h2 {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .expenses-section label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .expenses-section input[type="number"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .simulador {
+.simulador {
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos bajen de línea si no hay suficiente espacio */
     gap: 20px; /* Espacio entre columnas */
@@ -238,4 +242,3 @@ nav a.activo {
         flex-basis: 100%; /* Cada sección ocupa el ancho completo */
     }
 }
-
