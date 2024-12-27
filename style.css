@@ -346,3 +346,63 @@ footer a:hover {
     padding-left: 0px; /* Ajusta el espacio entre el texto y el borde de la columna derecha */
     text-align: center; /* Alinea el texto horizontalmente */
 }
+
+
+        .plataformas-page {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .excel-preview-container {
+            display: flex;
+            flex: 1;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .excel-preview-box {
+            flex: 1;
+            max-width: 45%; /* Limita el ancho en pantallas grandes */
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .excel-preview-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .excel-box-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .excel-box-content i {
+            font-size: 3rem;
+            color: #28a745;
+        }
+
+        .excel-box-content p {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
