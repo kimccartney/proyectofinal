@@ -405,4 +405,16 @@ footer a:hover {
 
         a:hover {
             text-decoration: underline;
-        };
+        }
+.plataformas-page {
+    min-height: 100vh; /* Ocupa al menos la altura completa de la ventana */
+    width: 100%; /* Asegura que el fondo cubra todo el ancho */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    background: linear-gradient(0deg, rgba(223,191,254,0.5298713235294117) 0%, rgba(183,247,216,0.4178265056022409) 100%);
+    background-size: cover; /* Asegura que el fondo cubra toda el área */
+    background-position: center;
+}
+
